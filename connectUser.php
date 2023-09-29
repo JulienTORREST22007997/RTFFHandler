@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../config/Database.php';
+require_once './Database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $database = new Database();
@@ -37,10 +37,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
+<?php
+require_once './navigation.php';
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Votre Page</title>
+</head>
+<body>
+<div style="margin-left:220px; padding:10px;">
+    <!-- Le contenu de votre page -->
+</div>
+</body>
+</html>
 <!-- Formulaire de connexion -->
-<form method="post" action="connectUser.php">
+<form method="post"  action="connectUser.php">
     Email: <input type="email" name="account_id" required><br>
     Mot de Passe: <input type="password" name="password" required><br>
     <input type="submit" value="Se connecter">
 </form>
+<a href="requestMailForReset.php">Mot de passe oublié</a><br>
+<a href="createUser.php">Créer un compte</a>

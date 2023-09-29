@@ -1,5 +1,5 @@
 <?php
-require_once '../config/Database.php';
+require_once './Database.php';
 
 // uploadProfileImage.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,6 +36,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<?php
+require_once './navigation.php';
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Votre Page</title>
+</head>
+<body>
+<div style="margin-left:220px; padding:10px;">
+    <!-- Le contenu de votre page -->
+</div>
+</body>
+</html>
 
 <?php ?>
     <!-- uploadProfileImage.php -->

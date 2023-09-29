@@ -1,7 +1,7 @@
 <?php
 
 // Inclure la configuration de la base de données
-require_once '../config/Database.php';
+require_once './Database.php';
 
 // Créer une instance de la base de données pour tester la connexion
 $database = new Database();
